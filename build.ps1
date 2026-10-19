@@ -3,7 +3,9 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = $PSScriptRoot
 $buildDir = Join-Path $repoRoot 'build'
 New-Item -ItemType Directory -Path $buildDir -Force | Out-Null
-$exports = @(Get-Content -LiteralPath (Join-Path $repoRoot 'src\exports.json') -Raw | ConvertFrom-Json)
+# JSON is an array. Assign it directly: Windows PowerShell 5.1 does not
+# enumerate ConvertFrom-Json arrays like modern PowerShell does.
+$exports = Get-Content -LiteralPath (Join-Path $repoRoot 'src\exports.json') -Raw | ConvertFrom-Json
 $header = [System.Collections.Generic.List[string]]::new()
 $definition = [System.Collections.Generic.List[string]]::new()
 $assembly = [System.Collections.Generic.List[string]]::new()
