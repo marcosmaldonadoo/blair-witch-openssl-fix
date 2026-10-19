@@ -28,7 +28,7 @@ Esta correção trata a falha de inicialização relacionada ao OpenSSL. Resolu�
 
 ## Testes e limites
 
-A primeira validação foi feita no Windows 11 x64, com a versão Steam de build **5340689**. O jogo foi iniciado pelo executável original sem uma variável OpenSSL herdada; o processo carregou o mod e permaneceu respondendo. A abertura pelo botão Jogar com as opções vazias e uma sessão completa ainda precisam de confirmação manual.
+A primeira validação foi feita no Windows 11 x64, com a versão Steam de build **5340689**. O jogo foi iniciado pelo executável original sem uma variável OpenSSL herdada; o processo carregou o mod e permaneceu respondendo. Em 19/10/2026, o usuário também confirmou que o jogo abriu pelo botão **Jogar**, seguindo as instruções para remover o comando antigo, e que o menu funcionou normalmente. Uma sessão completa ainda não foi validada.
 
 Os testes nativos verificam a variável visível ao `getenv` antes de `main`, os dois nomes de executável reconhecidos, a preservação de um valor existente, um processo não relacionado, 181 exportações e o encaminhamento de chamadas para a DLL do Windows.
 

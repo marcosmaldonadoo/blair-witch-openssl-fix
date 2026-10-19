@@ -61,6 +61,8 @@ Tests cover both recognized executable names, an unrelated executable, preservat
 
 Initially tested with Steam build **5340689** on Windows 11 x64. The alternate `-Win7` executable name is recognized, but Windows 7 itself has not been tested. Other storefronts, other builds, and combinations with other DLL mods are unverified.
 
+The user also confirmed startup through Steam's **Play** button and a working menu after following the instructions to remove the old launch workaround on 2026-10-19.
+
 See [VALIDATION.md](VALIDATION.md) for the exact scope of testing. A successful startup check does not establish full playthrough stability.
 
 ## License

@@ -23,6 +23,8 @@ Game: Blair Witch, Steam app 1092660, build 5340689; Windows 11 x64.
 
 The original `Blairwitch.exe` bootstrap launcher was started with `OPENSSL_ia32cap` removed from its child environment. No batch wrapper was used. The shipping process loaded both the local proxy and the Windows system `winmm.dll`, created a game window, and was responding when inspected after 15 seconds.
 
-This verifies startup via the original launcher on one installation. It does not verify a full playthrough, visual rendering, all audio APIs, other Windows versions, or other game builds. Steam's Play button with the old launch options removed still needs a separate manual check.
+On 2026-10-19, the user also confirmed that, after following the instructions to remove the previous OpenSSL launch command and click Steam's **Play** button, the game opened and its menu worked normally. This is user-reported manual confirmation on the same installation.
+
+Together, these checks verify startup through the original launcher and Steam on one installation. They do not verify a full playthrough, all audio APIs, other Windows versions, or other game builds.
 
 Existing display settings on the test installation had already been adjusted before this mod was developed. This mod does not modify display settings.
