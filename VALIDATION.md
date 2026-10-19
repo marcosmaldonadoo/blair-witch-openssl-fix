@@ -27,4 +27,10 @@ On 2026-10-19, the user also confirmed that, after following the instructions to
 
 Together, these checks verify startup through the original launcher and Steam on one installation. They do not verify a full playthrough, all audio APIs, other Windows versions, or other game builds.
 
+## Short in-game interaction check
+
+On 2026-10-19, a further UI check launched the shipping executable with Steam running, entered the main menu, and selected **New Game**. In the opening car sequence, pressing Tab brought up the phone and a left mouse click answered the fictional in-game call. The scene updated in response to both inputs. Escape opened the pause menu, where the game was left paused.
+
+This verifies rendering and basic keyboard/mouse interaction in one short opening sequence. It is not a full playthrough, an audio-listening test, or a performance benchmark. A local backup of existing profile/input save files was made before starting the test; no existing campaign save was present in the inspected SaveGames folder.
+
 Existing display settings on the test installation had already been adjusted before this mod was developed. This mod does not modify display settings.
