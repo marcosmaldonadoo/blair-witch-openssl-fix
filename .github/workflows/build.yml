@@ -1,0 +1,31 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-x64:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e # v2
+        with:
+          msystem: UCRT64
+          install: mingw-w64-ucrt-x86_64-gcc
+      - name: Compile DLL
+        shell: msys2 {0}
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File build.ps1 -Compiler "$(cygpath -w /ucrt64/bin/gcc.exe)"
+      - name: Native smoke tests
+        shell: msys2 {0}
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File test.ps1 -Compiler "$(cygpath -w /ucrt64/bin/gcc.exe)"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: blair-witch-openssl-fix-windows-x64
+          path: build/winmm.dll
+          if-no-files-found: error
