@@ -4,6 +4,8 @@ A small Windows x64 compatibility mod for **Blair Witch (2019)**. Install one DL
 
 [Português brasileiro](README.pt-BR.md) · [Download](https://github.com/marcosmaldonadoo/blair-witch-openssl-fix/releases) · [Validation](VALIDATION.md)
 
+[Detailed installation and troubleshooting guide (Brazilian Portuguese)](INSTALL.pt-BR.md)
+
 ## Install
 
 1. Close the game.

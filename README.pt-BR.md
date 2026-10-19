@@ -2,6 +2,8 @@
 
 Mod de compatibilidade para **Blair Witch (2019)** no Windows de 64 bits. Permite aplicar a correção do OpenSSL ao abrir o jogo pelo botão **Jogar** da Steam.
 
+**[Guia de instalação passo a passo, remoção e solução de problemas](INSTALL.pt-BR.md)**
+
 ## Instalação
 
 1. Feche o jogo.
